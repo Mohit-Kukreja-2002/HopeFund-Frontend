@@ -63,7 +63,7 @@ const YourFunds = ({ user }) => {
                           <div className='grid grid-cols-12 mt-4'>
                             {/* {console.log(fund)} */}
                             <div className='col-span-3 mr-4 500px:mr-0'>
-                            <Link href={`/fundraiser/${fund.id}`}>
+                            <Link href={`/fundraiser/${fund._id}`}>
                               <Image
                                 src={fund.coverImg?.url || coverImg}
                                 alt=""
