@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import Loader from './components/Loader/loader.jsx';
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 // import { dark } from "@mui/material/styles/createPalette";
 
 const poppins = Poppins({
@@ -73,7 +74,7 @@ const Custom = ({ children }) => {
   }, [isLoad]);
 
   // return (
-  return <>{isLoading ? <Loader /> : <div> <Analytics /> {children}</div>}</>;
+  return <>{isLoading ? <Loader /> : <div> <Analytics /> <SpeedInsights /> {children}</div>}</>;
   // <>
   //   {isLoading ? <div><Loader /></div> : isClient && children}
   // </>
