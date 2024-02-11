@@ -58,10 +58,12 @@ const YourFunds = ({ user }) => {
                     <div>
                       {data.resArray.map((fund) =>
                       (
+                        
                         <div className='my-auto' key={fund._id}>
                           <div className='grid grid-cols-12 mt-4'>
                             {/* {console.log(fund)} */}
                             <div className='col-span-3 mr-4 500px:mr-0'>
+                            <Link href={`/fundraiser/${fund.id}`}>
                               <Image
                                 src={fund.coverImg?.url || coverImg}
                                 alt=""
@@ -69,6 +71,7 @@ const YourFunds = ({ user }) => {
                                 height={80}
                                 className="w-[60px] min-w-[60px] mx-auto h-[60px] cursor-pointer border-[3px] border-[#9c3353]"
                               />
+                            </Link>
                             </div>
                             <div className='col-span-9 my-auto ml-4 600px:ml-0'>
                               <div className='block grid-cols-9 600px:grid'>
